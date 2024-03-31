@@ -6,7 +6,7 @@ spring:
   # Database Setting Info
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/safe_zone
+    url: jdbc:mariadb://localhost:3306/say_help
     username: root
     password: root
 

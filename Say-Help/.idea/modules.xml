@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Safe-Zone.iml" filepath="$PROJECT_DIR$/.idea/Safe-Zone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/say-help.main.iml" filepath="$PROJECT_DIR$/.idea/modules/say-help.main.iml" />
     </modules>
   </component>
 </project>
