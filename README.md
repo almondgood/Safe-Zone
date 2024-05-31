@@ -7,14 +7,16 @@
 
 # 시스템 구성도
 
+![image](https://github.com/almondgood/6aa-Iot-System/assets/88735581/b2737dfb-499c-4c0d-aa4f-3c1bdf95e453)
+
 
 <br><br>
 
 # 시스템 구조
 
 ### 1. 허브 서버(Raspberry PI)
-가. 각 모듈로부터 메시지를 수신하고 전달하는 TCP/IP Socket 허브 서버
-나. 이더넷에 연결되어 웹 서버에 기기 등록 요청 및 신고 요청 기능
+- 각 모듈로부터 메시지를 수신하고 전달하는 TCP/IP Socket 허브 서버 
+- 인터넷에 연결되어 웹 서버에 기기 등록 요청 및 신고 요청 기능
 
 |**Socket 초기화**|**명령 수신 / 사건 신고**|
 |:---:|:---:|
@@ -31,9 +33,9 @@
 <br>
 
 ### 2. 감시 카메라(Arduino, Jetson Nano)
-가. Arduino - 사건 발생 방향으로 조명 방향 조정
+- Arduino - 사건 발생 방향으로 조명 방향 조정
     - GPIO를 사용한 DC모터 제어
-나. Jetson Nano - 마이크로 수음하여 STT AI 모델에 데이터 전달
+- Jetson Nano - 마이크로 수음하여 STT AI 모델에 데이터 전달
 
 |**단말기 등록**|**STT**|
 |:---:|:---:|
@@ -43,9 +45,9 @@
 <br>
 
 ### 3. 웹 서버(Spring)
-가. 단말기를 관리하고, 단말기로부터 신고를 접수하는 웹서버
-나. 단말기 시리얼 번호와 위치의, 등록 요청을 받으면 단말기에 UUID 발급
-다. 단말기의 UUID를 확인하여 위치를 확정, 접수 로그 저장
+- 단말기를 관리하고, 단말기로부터 신고를 접수하는 웹서버
+- 단말기 시리얼 번호와 위치의, 등록 요청을 받으면 단말기에 UUID 발급
+- 단말기의 UUID를 확인하여 위치를 확정, 접수 로그 저장
 
 |**단말기 등록 요청 시 수신할 데이터**|**신고 시 수신할 데이터**|
 |:---:|:---:|
@@ -55,4 +57,3 @@
 |**단말기 DB 등록**|**경찰 신고 문자 전송**|
 |![image](https://github.com/almondgood/6aa-Iot-System/assets/88735581/9a98b893-ee7d-4b84-9796-8dfc8766e51e)|![image](https://github.com/almondgood/6aa-Iot-System/assets/88735581/1639c936-8b03-404d-b76d-8185f8d839f2)|
 |`Service Layer`|`Service Layer`|
-
